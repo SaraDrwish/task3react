@@ -8,6 +8,7 @@ class App extends Component {
       id: "",
       changeTask: "",
       isRender: false ,
+      comleted : false ,
   } ;
 
   handleChange = (e) => {
@@ -38,28 +39,35 @@ render(){
 
   return (
 
+    
+
 
     <div className="App">
+
    
-
-
        <form onSubmit={this.handelsubmit} >
 
          <p>Your Tasks for Today is: </p>
          <input type="text" id="task" value={this.state.task} placeholder="enter your task "  onChange ={this.handleChange}/>
           <input  type="submit"   />
 
-       </form>
-
-       
+       </form>    
      
              {this.state.isRender ? ( <p> {this.state.changeTask} </p>) : " "}
 
+             <Users />
  
     </div>
 
   );
+
+
+
+
 }
+
+
 }
+
 
 export default App;
