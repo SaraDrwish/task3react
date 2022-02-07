@@ -23,6 +23,8 @@ componentDidMount(){
         this.setState({
             loading:false,
             todos : res.data,
+//map
+
         });
 
     })
@@ -40,6 +42,11 @@ componentDidMount(){
         return(
 
             <div>
+
+               {/* { this.todos.map((todos)=>{
+                 return <h4> res.data </h4> } ) } */}
+                
+
             {  this.state.loading ? "Loading .... " :  " "} 
             { this.state.todos.length > 0 ? "Data ...." : " "} 
             {  this.state.err ? "Error!! " : " "}
